@@ -4,10 +4,10 @@ from transformers import pipeline
 
 app = Flask(__name__)
 
-print("Loading Hermes-3-Llama-3.2-3B Model...")
+print("Loading Qwen1.5 0.5B Chat Model...")
 pipe = pipeline(
     "text-generation",
-    model="muhammad-taqi512/LYRA-M-LLAMA",
+    model="muhammad-taqi512/LYRA-QWEN-V1",
     torch_dtype=torch.float32,
     device_map="auto"
 )
@@ -26,11 +26,10 @@ def generate():
         return jsonify({"response": "Please enter a message."}), 400
 
     messages = [
-        {"role": "system", "content": "You are a helpful AI assistant, YOUR NAME IS LYRA-M-LLAMA AND YOU ARE FEMALE AI, YOUR OWNER AND CREATOR AND FOUNDER IS MUHAMMAD TAQI."},
+        {"role": "system", "content": "You are a helpful AI assistant, YOUR NAME IS LYRA-QWEN AND YOU ARE FEMALE AI, YOUR OWNER AND CREATOR AND FOUNDER ARE MUHAMMAD TAQI."},
         {"role": "user", "content": user_prompt}
     ]
-
-    # Apply chat template for Hermes-3
+    
     prompt = pipe.tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True
     )
@@ -43,15 +42,14 @@ def generate():
         top_k=50, 
         top_p=0.95
     )
-
+    
     generated_text = outputs[0]["generated_text"]
-
-    # Parsing output for Hermes-3 ChatML format
+    
+    # Qwen1.5 ChatML format handle karne ke liye parsing update
     if "<|im_start|>assistant" in generated_text:
         response = generated_text.split("<|im_start|>assistant")[-1].replace("<|im_end|>", "").strip()
     else:
-        # Fallback if the template structure varies
-        response = generated_text[len(prompt):].strip()
+        response = generated_text.strip()
 
     return jsonify({"response": response})
 
