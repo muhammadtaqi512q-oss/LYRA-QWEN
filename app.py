@@ -5,7 +5,7 @@ from transformers import pipeline
 app = Flask(__name__)
 
 print("Loading Qwen1.5 0.5B Chat Model...")
-pipe = pipeline(
+pipe = pipeline( 
     "text-generation",
     model="muhammad-taqi512/LYRA-QWEN-V1",
     torch_dtype=torch.float32,
