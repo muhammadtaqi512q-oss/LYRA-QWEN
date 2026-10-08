@@ -1,6 +1,6 @@
 # TinyLlama AI Agent
 
 ### 🚀 Live Demo (Auto-Updated Every 6 Hours)
-**Active URL:** [https://licenses-alone-handhelds-missile.trycloudflare.com](https://licenses-alone-handhelds-missile.trycloudflare.com)
+**Active URL:** [https://recovered-gsm-harold-dramatic.trycloudflare.com](https://recovered-gsm-harold-dramatic.trycloudflare.com)
 
-_Last Updated: Wed Oct  7 22:48:10 UTC 2026_
+_Last Updated: Thu Oct  8 04:43:53 UTC 2026_
