@@ -1,6 +1,6 @@
 # TinyLlama AI Agent
 
 ### 🚀 Live Demo (Auto-Updated Every 6 Hours)
-**Active URL:** [https://luis-friends-converted-vertex.trycloudflare.com](https://luis-friends-converted-vertex.trycloudflare.com)
+**Active URL:** [https://classroom-years-specialty-levels.trycloudflare.com](https://classroom-years-specialty-levels.trycloudflare.com)
 
-_Last Updated: Fri Nov  6 13:48:56 UTC 2026_
+_Last Updated: Fri Nov  6 22:47:30 UTC 2026_
